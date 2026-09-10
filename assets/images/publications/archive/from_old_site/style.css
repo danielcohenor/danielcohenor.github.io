@@ -1,0 +1,396 @@
+/*
+Theme Name: Daniel
+Theme URI: http://wordpress.org/
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Hello, World
+Text Domain: twentythirteen
+*/
+
+/* ================================ IMPORTS ================================ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700");
+
+/* =============================== NORMALIZE =============================== */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+p {
+  margin: 0.5em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/*# sourceMappingURL=normalize.min.css.map */
+
+/* ================================ STYLES ================================= */
+body {
+  background-color: #588FAC;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #737373;
+  background-image: url("images/trianglify2.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+h2,
+h4 {
+  color: #444;
+  margin: 0.3em;
+}
+
+a {
+  color: #3b8fcf;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+hr {
+  border: none;
+  background-color: #bbb;
+  height: 2px;
+  width: 70%;
+  margin: 0em auto;
+}
+
+#root {
+  width: 800px;
+  max-width: 95%;
+  margin: auto;
+  padding: 2.5%;
+}
+
+nav,
+main {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5em;
+}
+
+.menu-top-menu-container {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+
+nav li::after {
+  content: " ";
+  display: block;
+  width: 1px;
+  height: 2em;
+  background-color: #bbb;
+  float: right;
+}
+
+nav li:last-of-type::after {
+  opacity: 0;
+}
+
+nav a {
+  color: #262626;
+  text-decoration: none;
+  vertical-align: -webkit-baseline-middle;
+  position: relative;
+  top: .2em;
+}
+
+nav a:hover {
+  color: #3b8fcf;
+  text-decoration: underline;
+}
+
+.separator {
+  width: 1px;
+  height: 2em;
+  background-color: #bbb;
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact img {
+  width: 200px;
+  margin-right: 2em;
+}
+
+#book {
+  margin: auto;
+  display: block;
+  width: 300px;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease;
+}
+
+#book:hover {
+  transform: scale(1.03);
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.15);
+}
+
+#book img {
+  width: 100%;
+}
+
+#badge {
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  transform: rotate(-15deg);
+}
+
+#badge img {
+  width: 3.5em;
+}
+
+@media screen and (max-width: 800px) {
+  .publication {
+    width: 90% !important;
+  }
+}
+
+.pub-content {
+  position: relative;
+  margin-left: 50%;
+  min-height: 120px;
+}
+
+.publication {
+  width: 45%;
+  padding: 0 2%;
+  display: inline-block;
+  font-size: .8em !important;
+  line-height: 1.3em !important;
+  vertical-align: top;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.publication p, .publication  h4, .publication  h5, .publication h6, .publication h7 {
+	color: #669900 !important;
+	font-weight: normal !important;
+	font-size: .8em !important;
+ 	line-height: 1.3em !important;
+}
+
+.publication:nth-of-type(1), .publication:nth-of-type(2) {
+  border-top: none;
+}
+
+.publication h3 {
+  color: #000;
+}
+
+.publication img {
+  width: 90%;
+  height: 100px;
+  object-fit: contain;
+  position: absolute;
+  left: -100%;
+  top: 0;
+}
+
+h2.sep {
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: relative;
+  margin: 1.5em auto;
+}
+
+h2.sep span {
+  background-color: #fff;
+  padding: 0.3em;
+}
+
+h2.sep::after {
+  margin: auto;
+  margin-top: -0.55em;
+  content: "";
+  display: block;
+  border: none;
+  background-color: #bbb;
+  height: 2px;
+  width: 70%;
+}
+
+.entry-meta {
+  display: none;
+}

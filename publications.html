@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research publications by Daniel Cohen-Or.">
+  <title>Publications — Daniel Cohen-Or</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/site.js" defer></script>
+  <script src="data/publications-data.js" defer></script>
+  <script src="data/publication-metadata.js" defer></script>
+  <script src="data/publication-images.js" defer></script>
+  <script src="assets/js/publications.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Daniel Cohen-Or</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Primary navigation"><a href="index.html">About</a><a class="active" href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="team.html">Team</a></nav>
+  </header>
+  <main class="wrap page-main">
+    <header class="page-heading publication-heading">
+      <h1>Publications</h1>
+    </header>
+    <section class="publication-tools" aria-label="Publication filters">
+      <label class="search-box"><span class="sr-only">Search publications</span><input id="publication-search" type="search" placeholder="Search title, author, or venue"></label>
+      <div class="publication-filter-controls">
+        <label class="preprint-toggle" for="show-preprints">
+          <input id="show-preprints" type="checkbox">
+          <span class="toggle-track" aria-hidden="true"><span></span></span>
+          <span>Show preprints</span>
+        </label>
+        <div id="year-filters" class="year-filters" aria-label="Filter by year"></div>
+      </div>
+    </section>
+    <p id="publication-status" class="status" role="status">Loading publications…</p>
+    <div id="publication-list" class="publication-list"></div>
+  </main>
+  <footer class="site-footer wrap"><p>© <span data-current-year></span> Daniel Cohen-Or</p><div><a href="mailto:cohenor@gmail.com">Email</a><a href="https://scholar.google.com/citations?user=fAxws1sAAAAJ&hl=en">Scholar</a></div></footer>
+</body>
+</html>
