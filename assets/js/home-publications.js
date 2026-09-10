@@ -28,7 +28,7 @@ if (homePublicationList && Array.isArray(window.PUBLICATIONS)) {
   const metadata = new Map((window.PUBLICATION_METADATA || []).map((item) => [homeNormalizeTitle(item.title), item]));
   const images = new Map((window.PUBLICATION_IMAGES || []).map((item) => [homeNormalizeTitle(item.title), item.image]));
   const available = window.PUBLICATIONS
-    .filter((item) => item.type === 'paper' && item.venue !== 'Preprint')
+    .filter((item) => item.type === 'paper' && item.venue !== 'Preprint' && !item.title.startsWith('Analysis-by-Proxy:'))
     .map((item) => {
       const match = metadata.get(homeNormalizeTitle(item.title));
       return {
