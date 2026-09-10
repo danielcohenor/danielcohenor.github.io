@@ -111,7 +111,7 @@ function renderFilters() {
   const years = [...new Set(publications.map((item) => item.year))].sort((a, b) => b - a);
   filtersNode.innerHTML = ['all', ...years].map((year) => {
     const label = year === 'all' ? 'All years' : year;
-    return `<button type="button" data-year="${year}" class="${year === selectedYear ? 'active' : ''}">${label}</button>`;
+    return `<button type="button" data-year="${year}" class="${String(year) === String(selectedYear) ? 'active' : ''}">${label}</button>`;
   }).join('');
 }
 
