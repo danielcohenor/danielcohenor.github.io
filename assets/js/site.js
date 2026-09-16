@@ -8,7 +8,8 @@ if (siteNavigation) {
   const navigationItems = [
     ['index.html', 'About'],
     ['publications.html', 'Publications'],
-    ['team.html', 'Lab']
+    ['team.html', 'Lab'],
+    ['gallery.html', 'Gallery']
   ];
   siteNavigation.setAttribute('aria-label', 'Primary navigation');
   siteNavigation.innerHTML = navigationItems.map(([href, label]) =>
