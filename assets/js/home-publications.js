@@ -28,7 +28,7 @@ if (homePublicationList && Array.isArray(window.PUBLICATIONS)) {
   const metadata = new Map((window.PUBLICATION_METADATA || []).map((item) => [homeNormalizeTitle(item.title), item]));
   const images = new Map((window.PUBLICATION_IMAGES || []).map((item) => [homeNormalizeTitle(item.title), item.image]));
   const available = window.PUBLICATIONS
-    .filter((item) => item.type === 'paper' && item.venue !== 'Preprint' && !item.title.startsWith('Analysis-by-Proxy:'))
+    .filter((item) => item.type === 'paper')
     .map((item) => {
       const match = metadata.get(homeNormalizeTitle(item.title));
       return {
@@ -38,10 +38,15 @@ if (homePublicationList && Array.isArray(window.PUBLICATIONS)) {
       };
     })
     .sort((a, b) => b.year - a.year || (b.arxiv || '').localeCompare(a.arxiv || '') || a.title.localeCompare(b.title));
-  const selected = available.slice(0, 5);
-  const multiActIndex = selected.findIndex((item) => item.title.startsWith('MultiAct:'));
-  const abstractionInStyle = available.find((item) => item.title.startsWith('Abstraction in Style'));
-  if (multiActIndex >= 0 && abstractionInStyle) selected[multiActIndex] = abstractionInStyle;
+  const featuredTitles = [
+  "ACEdit: Stable Multi-Turn Image Editing via Asymmetric Conditioning",
+  "Learning to Read the Contextual Tokens in Diffusion Transformers",
+  "Token-to-Token Alignment of Text Embeddings for Semantic Blending",
+  "Abstraction in Style: Beyond Texture and Color"
+];
+  const featured = featuredTitles.map((title) => available.find((item) => item.title === title)).filter(Boolean);
+  const remaining = available.filter((item) => !featuredTitles.includes(item.title) && item.venue !== 'Preprint' && !item.title.startsWith('Analysis-by-Proxy:'));
+  const selected = [...featured, ...remaining].slice(0, 5);
 
   homePublicationList.innerHTML = selected.map((item) => `
     <article class="work-preview-card">
