@@ -39,7 +39,7 @@ function publicationMedia(publication) {
 
 function venueSortMonth(publication) {
   const venue = publication.venue || '';
-  if (/SIGGRAPH Asia/i.test(venue)) return 12;
+  if (/NeurIPS|SIGGRAPH Asia/i.test(venue)) return 12;
   if (/ICCV/i.test(venue)) return 10;
   if (/ECCV/i.test(venue)) return 9;
   if (/SIGGRAPH/i.test(venue)) return 8;
