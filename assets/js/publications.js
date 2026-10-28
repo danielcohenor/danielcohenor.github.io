@@ -6,7 +6,7 @@ const preprintToggleNode = document.querySelector('#show-preprints');
 
 let publications = [];
 let selectedYear = 'all';
-let showPreprints = false;
+let showPreprints = preprintToggleNode.checked;
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>'"]/g, (character) => ({
